@@ -28,7 +28,14 @@ public class ReportServiceImpl implements ReportServiceI {
         writer.writeNext(new String[]{"Loan ID", "Customer", "Type", "Amount", "Status", "Date"});
 
         for (Loan loan : loans) {
-            writer.writeNext(new String[]{loan.getId().toString(), loan.getCustomer().getName(), loan.getLoanType(), String.valueOf(loan.getAmount()), loan.getStatus(), loan.getAppliedDate().toString()});
+            writer.writeNext(new String[]{
+                    loan.getId().toString(),
+                    loan.getCustomer().getName(),
+                    loan.getLoanType(),
+                    String.valueOf(loan.getAmount()),
+                    loan.getStatus(),
+                    loan.getAppliedDate().toString()
+            });
         }
 
         writer.close();

@@ -6,10 +6,11 @@ import com.expertise.csv.report.generator.example.service.CustomerServiceI;
 import com.expertise.csv.report.generator.example.service.LoanServiceI;
 import com.expertise.csv.report.generator.example.service.ReportServiceI;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/csv")
 public class ReportController {
@@ -34,12 +35,11 @@ public class ReportController {
     }
 
     @GetMapping("/report")
-    public ResponseEntity<String> exportCsv(HttpServletResponse response) {
+    public void exportCsv(HttpServletResponse response) {
         try {
             reportServiceI.exportLoanReport(response);
-            return ResponseEntity.ok("Report exported successfully as CSV.");
         } catch (Exception e) {
-            return ResponseEntity.status(500).body("Failed to export report: " + e.getMessage());
+            log.error("Error occurred while exporting CSV report", e);
         }
     }
 
