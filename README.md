@@ -1,8 +1,6 @@
-# CSV Report Generator – Example Project 🎯📄 
+# CSV Report Generator – Project  ⚙️📄 
 
-This **Spring Boot** application is designed for managing **Customer** and **Loan** records with full CRUD operations. **Provides REST APIs to export loan data to CSV format using OpenCSV**. Built with Lombok, JPA, and MySQL for efficient data handling and reporting.
-
----
+This **Spring Boot** application is designed for managing **Customer** and **Loan** records with full CRUD operations example. **Provides REST APIs to export loan data to CSV format using OpenCSV**. Built with Lombok, JPA, and MySQL for efficient data handling and reporting.
 
 ## What is CSV? 📘 
 
@@ -11,7 +9,7 @@ Each line is a row, and each value is separated by a comma (`,`).
 
 ---
 
-##  Why We Use CSV in Projects? 🎯
+##  Why We Use CSV in Projects?
 
 - Export tabular data easily (e.g., loan reports)
 - Openable in Excel, Google Sheets
@@ -21,7 +19,7 @@ Each line is a row, and each value is separated by a comma (`,`).
 
 ---
 
-## How to Implement CSV Export in Spring Boot? ⚙️ 
+## How to Implement CSV Export in Spring Boot? 
 
 ### 🔹 Step-by-Step Guide
 
